@@ -2,9 +2,9 @@ import java.util.Scanner;
 public class Pemilihan2Percobaan227 {
     public static void main(String[] args) {
         Scanner input27 = new Scanner(System.in);
-        String member;
+        String member, QRIS;
         int pilihan_menu;
-        double harga, totalBayar, diskon;
+        double harga, totalBayar, diskon, diskon_qris;
 
         System.out.println("----------------------------------");
         System.out.println("========== MENU KAFE JTI==========");
@@ -18,6 +18,9 @@ public class Pemilihan2Percobaan227 {
         input27.nextLine();
         System.out.print("Apakah punya member y/n ? = ");
         member = input27.nextLine();
+        System.out.print("Apakah menggunakan QRIS y/n ? =  ");
+        QRIS = input27.nextLine();
+
         System.out.println("----------------------------------");
 
         if (member.equals("y")) {
@@ -59,7 +62,8 @@ public class Pemilihan2Percobaan227 {
             } else {
                 System.out.println("Masukan pilihan menu dengan benar");
                 return;
-            }
+            } 
+        
         System.out.println("Total bayar = " + harga);
 
         } else {

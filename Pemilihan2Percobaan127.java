@@ -7,10 +7,12 @@ public class Pemilihan2Percobaan127 {
         System.out.print("Masukan tahun: ");
         tahun = input27.nextInt();
         
-        if ((tahun % 4) != 0) {
-            if ((tahun % 100) != 0);
+        if ((tahun % 4) == 0) {
+            if ((tahun % 100)!= 0);
             System.out.println("Tahun kabiset");
-        }   else
+            else 
+            System.out.println("Bukan tahun kabiset");
+        }else
             System.out.println("Bukan tahun kabiset");
 
     }
