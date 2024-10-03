@@ -20,7 +20,7 @@ public class Pemilihan2Percobaan227 {
         member = input27.nextLine();
         System.out.println("----------------------------------");
 
-        if (member.equalsIgnoreCase("y")) {
+        if (member.equals("y")) {
             diskon = 0.10;
             System.out.println("Besar diskon = 10%");
             if (pilihan_menu == 1) {
@@ -43,7 +43,7 @@ public class Pemilihan2Percobaan227 {
         System.out.println("Total bayar setelah diskon = " + totalBayar);
 
             
-        } else if (member.equalsIgnoreCase("n")) {
+        } else if (member.equals("n")) {
             if (pilihan_menu == 1) {
                 harga = 14000;
                 System.out.println("Harga Rice Bowl = " + harga);
@@ -67,6 +67,6 @@ public class Pemilihan2Percobaan227 {
         }
         System.out.println("---------------------------------");
 
-        
+
     }
 }
