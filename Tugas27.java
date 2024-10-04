@@ -12,9 +12,9 @@ public class Tugas27 {
         jumlahBuku = input27.nextInt();
 
         if (jenisBuku.equalsIgnoreCase("kamus")) {
-            if (jumlahBuku >= 2) {
+            if (jumlahBuku > 2) {
                 totalDiskon = 0.12;
-            } else if (jumlahBuku <= 2) {
+            } else if(jumlahBuku <= 2) {
                 totalDiskon = 0.1;
             }
             hargaAwal = (int) (jumlahBuku*hargaBuku);
@@ -25,7 +25,29 @@ public class Tugas27 {
 
             totalBayar = (int) ((hargaBuku*jumlahBuku) - jumlahDiskon);
             System.out.println("Total Bayar setelah diskon: " + totalBayar);
-            
+
+        }else if (jenisBuku.equalsIgnoreCase("novel")) {
+            if (jumlahBuku > 3) {
+                totalDiskon = 0.09;
+            } else if (jumlahBuku >= 1 && jumlahBuku <= 3) {
+                totalDiskon = 0.08;
+            } else {
+                totalDiskon = 0.05;
+            }
+            hargaAwal = (int) (jumlahBuku*hargaBuku);
+            System.out.println("Harga Buku: " + hargaAwal);
+
+            jumlahDiskon = (int) (hargaBuku*totalDiskon) * jumlahBuku;
+            System.out.println("Jumlah Diskon: " + jumlahDiskon);
+
+            totalBayar = (int) ((hargaBuku*jumlahBuku) - jumlahDiskon);
+            System.out.println("Total Bayar setelah diskon: " + totalBayar);
+        } else {
+            if (jumlahBuku > 3) {
+                totalDiskon = 0;
+            }
+            totalBayar = (int)(jumlahBuku*hargaBuku);
+            System.out.println("Harga pembelian buku: " + totalBayar);   
         }
     }
 }
