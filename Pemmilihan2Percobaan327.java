@@ -6,9 +6,9 @@ public class Pemmilihan2Percobaan327 {
         int penghasilan, gajiBersih;
         double pajak = 0;
 
-        System.out.println("Masukan Kategori: ");
+        System.out.print("Masukan Kategori: ");
         kategori = input27.nextLine();
-        System.out.println("Masukan Besarnya Penghasilan: ");
+        System.out.print("Masukan Besarnya Penghasilan: ");
         penghasilan = input27.nextInt();
 
         if (kategori.equalsIgnoreCase("pekerja")) {
@@ -36,7 +36,7 @@ public class Pemmilihan2Percobaan327 {
             System.out.println("Penghasilan Bersih: " + gajiBersih);
         } else {
             System.out.println("Masukan Kategori Salah");
-            
+
         }
     }
 }
