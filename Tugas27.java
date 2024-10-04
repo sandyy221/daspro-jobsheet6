@@ -4,7 +4,7 @@ public class Tugas27 {
         Scanner input27 = new Scanner(System.in);
         String jenisBuku;
         int jumlahBuku, totalBayar, hargaAwal;
-        double hargaBuku = 20000, totalDiskon = 0;
+        double hargaBuku = 20000, totalDiskon = 0, jumlahDiskon;
 
         System.out.print("Jenis Buku: ");
         jenisBuku = input27.nextLine();
@@ -19,7 +19,11 @@ public class Tugas27 {
             }
             hargaAwal = (int) (jumlahBuku*hargaBuku);
             System.out.println("Harga Buku: " + hargaAwal);
-            totalBayar = (int) (hargaBuku - (totalDiskon*hargaBuku));
+
+            jumlahDiskon = (int) (hargaBuku*totalDiskon) * jumlahBuku;
+            System.out.println("Jumlah Diskon: " + jumlahDiskon);
+
+            totalBayar = (int) ((hargaBuku*jumlahBuku) - jumlahDiskon);
             System.out.println("Total Bayar setelah diskon: " + totalBayar);
             
         }
