@@ -2,9 +2,9 @@ import java.util.Scanner;
 public class Pemilihan2Percobaan227 {
     public static void main(String[] args) {
         Scanner input27 = new Scanner(System.in);
-        String member, QRIS;
+        String member,pembayaran;
         int pilihan_menu;
-        double harga, totalBayar, diskon, diskon_qris;
+        double harga, totalBayar, diskon;
 
         System.out.println("----------------------------------");
         System.out.println("========== MENU KAFE JTI==========");
@@ -18,8 +18,8 @@ public class Pemilihan2Percobaan227 {
         input27.nextLine();
         System.out.print("Apakah punya member y/n ? = ");
         member = input27.nextLine();
-        System.out.print("Apakah menggunakan QRIS y/n ? =  ");
-        QRIS = input27.nextLine();
+        System.out.print("Metode pembayaran: ");
+        pembayaran = input27.nextLine();
 
         System.out.println("----------------------------------");
 
@@ -42,10 +42,16 @@ public class Pemilihan2Percobaan227 {
                 System.out.println("Masukan pilihan menu dengan benar");
                 return;
             }
-        totalBayar = harga - (harga*diskon);
-        System.out.println("Total bayar setelah diskon = " + totalBayar);
-
-            
+            if (pembayaran.equalsIgnoreCase("QRIS")) {
+                totalBayar = harga - (harga * diskon);
+                totalBayar -= 1000;
+                System.out.println("Potongan harga Rp. 1.000");
+                System.out.println("Total bayar setelah diskon = " + totalBayar);
+            }else{
+                totalBayar = harga - (harga * diskon);
+                System.out.println("Total bayar setelah diskon = " + totalBayar);
+            }
+        
         } else if (member.equals("n")) {
             if (pilihan_menu == 1) {
                 harga = 14000;
@@ -64,7 +70,13 @@ public class Pemilihan2Percobaan227 {
                 return;
             } 
         
-        System.out.println("Total bayar = " + harga);
+            if (pembayaran.equalsIgnoreCase("QRIS")) {
+                harga -= 1000;
+                System.out.println("Potongan harga Rp. 1.000");
+                System.out.println("Total bayar = " + harga);
+            }else{
+                System.out.println("Total bayar = " + harga);
+            }
 
         } else {
             System.out.println("Member tidak valid");
